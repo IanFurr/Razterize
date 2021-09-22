@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" type="image/png" href="images/main/favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+
+        <meta property="og:site_name" content="Razterize | Terms of Serivce" />
+        <meta property="og:title" content="Razterize | Terms of Serivce" />
+        <meta property="og:url" content="https://razterize.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description"
+          content="Hey! there, if you can read this I just want to tell you that you are awesome!" />
+        <meta property="og:image" content="https://i.imgur.com/SqCSLZd.png" />
+        <meta name="theme-color" content="#FF1139" />
+      
+        <title>Razterize</title>
+      </head>
+
+    <body>
+          
+        <!---------------------------------NAVBAR--------------------------------->
+        <header>
+            <div class="razlogo">
+                <a href="index.html"><img src="images/main/logo.png" width="auto" height="50"></a>
+            </div>
+            <div class="navigation">
+              <ul class="menu">
+                <div class="close-btn"></div>
+                <li class="menu-item"><a href="index.html">Home</a></li>
+                <li class="menu-item">
+                  <a class="sub-btn" href="#">Portfolio <i class="fas fa-angle-down"></i></a>
+                  <ul class="sub-menu">
+                    <li class="sub-item"><a href="logo.html">Logo</a></li>
+                    <li class="sub-item"><a href="header.html">Header</a></li>
+                    <li class="sub-item"><a href="Stream.html">Stream</a></li>
+                    <li class="sub-item"><a href="ui.html">UI Designs</a></li>
+                    <li class="sub-item"><a href="others.html">Others</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item"><a href="about.html">About</a></li>
+                <li class="menu-item"><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="menu-btn"></div>
+          </header>
+
+          <script type="text/javascript">
+            //jquery for toggle dropdown menus
+            $(document).ready(function(){
+              //toggle sub-menus
+              $(".sub-btn").click(function(){
+                $(this).next(".sub-menu").slideToggle();
+              });
+            
+              //toggle more-menus
+              $(".more-btn").click(function(){
+                $(this).next(".more-menu").slideToggle();
+              });
+            });
+            
+            //javascript for the responsive navigation menu
+            var menu = document.querySelector(".menu");
+            var menuBtn = document.querySelector(".menu-btn");
+            var closeBtn = document.querySelector(".close-btn");
+            
+            menuBtn.addEventListener("click", () => {
+              menu.classList.add("active");
+            });
+            
+            closeBtn.addEventListener("click", () => {
+              menu.classList.remove("active");
+            });
+            
+            //javascript for the navigation bar effects on scroll
+            window.addEventListener("scroll", function(){
+              var header = document.querySelector("header");
+              header.classList.toggle("sticky", window.scrollY > 0);
+            });
+            </script>
+        <!------------------------------------------------------------------------->
+
+        <div class="tos">
+            <p>TERMS<span style="color: #FF1139"> OF </span>SERVICE</p>
+            <p class="tossmall">By purchasing from me, you automatically agree to all these terms<span style="color: #FF1139">.</span></p>
+
+            <p class="tostitle">GENERAL</p>
+                <p class="tosinfo">
+                    <span style="color: #FF1139">•</span> These Terms of Service may be updated any time without prior notice. <br>
+                    <span style="color: #FF1139">•</span> All work must be discussed in tickets. <br>
+                    <span style="color: #FF1139">•</span> I reserve the right to refuse service to anyone. <br>
+                    <span style="color: #FF1139">•</span> You must not take my graphics as your own. <br>
+                    <span style="color: #FF1139">•</span> You cannot cancel an order after it's began. Only I can do so, if appropriate. <br>
+                </p>
+
+            <p class="tostitle">PRICES</p>
+                <p class="tosinfo">
+                    <span style="color: #FF1139">•</span> Prices will vary depending on the complexity and time it will take to finish. <br>
+                    <span style="color: #FF1139">•</span> PSD, SVG, Ai Files have extra charge. May depends on the content. <br>
+                </p>
+
+            <p class="tostitle">PAYMENTS</p>
+                <p class="tosinfo">
+                    <span style="color: #FF1139">•</span> You must pay first before I start. <br>
+                    <span style="color: #FF1139">•</span> All payment goes through PayPal invoice. <br>
+                    <span style="color: #FF1139">•</span> Payments below $50 must be paid 100%. <br>
+                    <span style="color: #FF1139">•</span> Payments above $51 must have 50% paid before work is started. <br>
+                    <span style="color: #FF1139">•</span> Once the first 50% is paid, there is no backing out. <br>
+                    <span style="color: #FF1139">•</span> You must cover the fees. <br>
+                </p>
+
+            <p class="tostitle">REFUNDS</p>
+                <p class="tosinfo">
+                    <span style="color: #FF1139">•</span> Cancellations and Refunds can only be made before the work is started. <br>
+                    <span style="color: #FF1139">•</span> Refunds will have transfer/conversion fees deducted from payment received. <br>
+                    <span style="color: #FF1139">•</span> Charge backs are disallowed no matter what the condition is. <br>
+                </p>
+        </div>
+
+    </body>
+</html>

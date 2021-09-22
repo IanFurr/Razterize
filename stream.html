@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" type="image/png" href="images/main/favicon.ico" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+
+        <meta property="og:site_name" content="Razterize | Portfolio" />
+        <meta property="og:title" content="Razterize | Portfolio" />
+        <meta property="og:url" content="https://razterize.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description"
+          content="Hey! there, if you can read this I just want to tell you that you are awesome!" />
+        <meta property="og:image" content="https://i.imgur.com/0dbLzvC.png" />
+        <meta name="theme-color" content="#FF1139" />
+      
+        <title>Razterize</title>
+      </head>
+
+    <body>
+          
+        <!---------------------------------NAVBAR--------------------------------->
+        <header>
+          <div class="razlogo">
+              <a href="index.html"><img src="images/main/logo.png" width="auto" height="50"></a>
+          </div>
+          <div class="navigation">
+            <ul class="menu">
+              <div class="close-btn"></div>
+              <li class="menu-item"><a href="index.html">Home</a></li>
+              <li class="menu-item">
+                <a class="sub-btn" href="#" style="color: #FF1139">Portfolio <i class="fas fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                  <li class="sub-item"><a href="logo.html">Logo</a></li>
+                  <li class="sub-item"><a href="header.html">Header</a></li>
+                  <li class="sub-item"><a href="stream.html">Stream</a></li>
+                  <li class="sub-item"><a href="ui.html">UI Designs</a></li>
+                  <li class="sub-item"><a href="others.html">Others</a></li>
+                </ul>
+              </li>
+              <li class="menu-item"><a href="about.html">About</a></li>
+              <li class="menu-item"><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="menu-btn"></div>
+        </header>
+
+        <script type="text/javascript">
+          //jquery for toggle dropdown menus
+          $(document).ready(function(){
+            //toggle sub-menus
+            $(".sub-btn").click(function(){
+              $(this).next(".sub-menu").slideToggle();
+            });
+          
+            //toggle more-menus
+            $(".more-btn").click(function(){
+              $(this).next(".more-menu").slideToggle();
+            });
+          });
+          
+          //javascript for the responsive navigation menu
+          var menu = document.querySelector(".menu");
+          var menuBtn = document.querySelector(".menu-btn");
+          var closeBtn = document.querySelector(".close-btn");
+          
+          menuBtn.addEventListener("click", () => {
+            menu.classList.add("active");
+          });
+          
+          closeBtn.addEventListener("click", () => {
+            menu.classList.remove("active");
+          });
+          
+          //javascript for the navigation bar effects on scroll
+          window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+          });
+          </script>
+        <!------------------------------------------------------------------------->
+
+        <div class="portinfo">
+          <h1>Live Streaming Designs<span style="color: #FF1139">.</span></h1>
+        </div>
+
+        <div class="gallery-section">
+            <div class="inner-width">
+              <div class="streamgallery">
+                <a class="image"><img src="images/portfolio/Streaming/DarenRS_StreamPack_Be.jpg" alt=""></a>
+                <a class="image"><img src="images/portfolio/Streaming/Hypie-Stream-Pack.png" alt=""></a>
+                <a class="image"><img src="images/portfolio/Streaming/MaxTan-Stream-Pack.png" alt=""></a>
+                <a class="image"><img src="images/portfolio/Streaming/Nation9_StreamPackage.png" alt=""></a>
+                <a class="image"><img src="images/portfolio/Streaming/PrivAssociates_StreamPack.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+
+    </body>
+</html>
